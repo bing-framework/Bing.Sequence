@@ -39,10 +39,10 @@ namespace Bing.Sequence.Snowflake
         /// <param name="sequence">序列号</param>
         public static SnowflakeSequenceBuilder Create(long datacenterId, long workerId, long sequence = 0L)
         {
-            SnowflakeSequenceBuilder builder = new SnowflakeSequenceBuilder();
-            builder._datacenterId = datacenterId;
-            builder._workerId = workerId;
-            builder._sequence = sequence;
+            SnowflakeSequenceBuilder builder = new SnowflakeSequenceBuilder
+            {
+                _datacenterId = datacenterId, _workerId = workerId, _sequence = sequence
+            };
             return builder;
         }
     }
